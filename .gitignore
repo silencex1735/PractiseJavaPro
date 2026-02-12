@@ -1,0 +1,137 @@
+# ======================== IntelliJ IDEA 专属配置 ========================
+# 忽略 IDEA 编译Java代码生成的输出目录（存放.class文件等编译产物），类似Maven的target
+out/
+# 例外规则：保留src/main目录下的out文件夹（极少场景下需要，比如自定义编译路径）
+!**/src/main/**/out/
+# 例外规则：保留src/test目录下的out文件夹（同上，测试代码编译产物）
+!**/src/test/**/out/
+# 忽略IDEA的项目配置目录（包含本地开发环境、插件、运行配置等，不同电脑配置不同）
+.idea/
+# 忽略IDEA的模块配置文件（每个模块一个.iml，本地环境相关）
+*.iml
+# 忽略IDEA的工作区配置文件（记录窗口布局、断点等本地操作）
+*.iws
+# 忽略IDEA的项目根配置文件（项目级别的设置，无需共享）
+*.ipr
+
+
+
+
+# ======================== Maven 构建工具 ========================
+# 忽略Maven编译/打包生成的核心目录（最核心的忽略项，存放编译产物、jar包、报告等）
+target/
+# 忽略Maven发布过程中生成的tag标记文件
+pom.xml.tag
+# 忽略Maven发布时备份的pom.xml文件
+pom.xml.releaseBackup
+# 忽略Maven版本更新时备份的pom.xml文件
+pom.xml.versionsBackup
+# 忽略Maven下一个版本的pom.xml临时文件
+pom.xml.next
+# 忽略Maven发布时生成的属性文件（记录发布版本、仓库地址等）
+release.properties
+# 忽略Maven打包时生成的简化pom.xml（去除依赖后的pom）
+dependency-reduced-pom.xml
+# 忽略Maven构建编号属性文件（记录构建次数等）
+buildNumber.properties
+# 忽略Maven的计时属性文件（记录构建各阶段耗时）
+.mvn/timing.properties
+# 忽略Maven wrapper的jar包（如果项目用wrapper，建议保留，这里忽略是可选的）
+.mvn/wrapper/maven-wrapper.jar
+
+# ======================== Gradle 构建工具 ========================
+# 忽略Gradle的缓存目录（存放下载的依赖、编译缓存等）
+.gradle/
+# 忽略Gradle的构建输出目录（类似Maven的target）
+build/
+# 例外规则：保留Gradle wrapper的jar包（必须保留，否则团队成员无法统一Gradle版本）
+!gradle/wrapper/gradle-wrapper.jar
+# 例外规则：保留src/main目录下的build文件夹（自定义构建路径场景）
+!**/src/main/**/build/
+# 例外规则：保留src/test目录下的build文件夹（测试代码构建产物）
+!**/src/test/**/build/
+
+# ======================== Java 通用规则 ========================
+# 忽略Java编译后的字节码文件（核心，可通过源码重新编译生成）
+*.class
+# 忽略Java打包后的jar包（可通过源码重新打包）
+*.jar
+# 忽略Java Web项目的war包（Web应用打包产物）
+*.war
+# 忽略Java企业级应用的ear包（企业应用打包产物）
+*.ear
+# 忽略压缩包（项目中一般不提交大体积压缩文件）
+*.zip
+*.tar.gz
+*.rar
+
+# ======================== Windows 系统专属 ========================
+# 忽略Windows缩略图缓存文件（存放文件夹图片缩略图）
+Thumbs.db
+# 忽略Windows增强缩略图缓存文件
+ehthumbs.db
+# 忽略Windows文件夹的配置文件（记录文件夹图标、排序方式等）
+Desktop.ini
+# 忽略Windows回收站的文件夹（系统级，无需提交）
+$RECYCLE.BIN/
+# 忽略Windows临时文件（程序运行时生成的临时缓存）
+*.tmp
+# 忽略日志文件（运行时生成，包含调试信息，无需版本控制）
+*.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ======================== Eclipse 专属配置 ========================
+# 忽略Eclipse的APT(注解处理工具)生成的文件
+.apt_generated
+# 忽略Eclipse的类路径配置文件（记录项目依赖的jar包路径）
+.classpath
+# 忽略Eclipse的工厂路径配置文件（插件相关）
+.factorypath
+# 忽略Eclipse的项目核心配置文件（项目名称、编码等）
+.project
+# 忽略Eclipse的设置目录（包含代码格式化、编译器版本等配置）
+.settings
+# 忽略Spring Tools Suite生成的Spring Bean配置文件
+.springBeans
+# 忽略STS4（Spring Tool Suite 4）的缓存文件
+.sts4-cache
+# 忽略Eclipse的编译输出目录（存放.class文件，类似IDEA的out）
+bin/
+# 例外规则：保留src/main目录下的bin文件夹（自定义编译路径场景）
+!**/src/main/**/bin/
+# 例外规则：保留src/test目录下的bin文件夹（测试代码编译产物）
+!**/src/test/**/bin/
+
+# ======================== NetBeans 专属配置 ========================
+# 忽略NetBeans的私有配置目录（本地开发环境设置）
+/nbproject/private/
+# 忽略NetBeans的构建目录（编译产物）
+/nbbuild/
+# 忽略NetBeans的分发目录（打包后的产物，如jar/war）
+/dist/
+# 忽略NetBeans的本地分发目录
+/nbdist/
+# 忽略NetBeans集成Gradle的缓存目录
+/.nb-gradle/
+
+# ======================== VS Code 专属配置 ========================
+# 忽略VS Code的配置目录（包含插件设置、launch.json、settings.json等）
+.vscode/
+
+# ======================== Mac OS 系统专属 ========================
+# 忽略Mac系统自动生成的隐藏文件（用于文件夹缩略图、自定义图标等，Windows不会生成）
+.DS_Store
+
