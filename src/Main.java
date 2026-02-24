@@ -16,5 +16,7 @@ public class Main {
         System.out.println("Goodbye");
         System.out.println("Goodbye");
         System.out.println("Goodbye");
+
+        System.out.println((Math.log(10^7))/(Math.log(2)));
     }
 }
